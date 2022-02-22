@@ -5,7 +5,7 @@ fi
 
 ## NB: We can't find PREFIX easily in a profile.d script so we'll need to
 ## try to guess what it is by running down the existing path
-BINDIR=$(which wsl-enable-ssh-agent)
+BINDIR=$(dirname `which wsl-enable-ssh-agent`)
 PREFIX=$(realpath "$BINDIR/..")
 
 ## Put our symlinked OpenSSH in front of the real one
