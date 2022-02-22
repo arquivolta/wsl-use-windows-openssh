@@ -6,8 +6,8 @@ install:
 	install -d $(DESTDIR)$(prefix)/bin
 	install -m 755 -o root -g root -D bin/* $(DESTDIR)$(prefix)/bin
 
-	install -d $(DESTDIR)$(prefix)/etc/profile.d
-	install -m 755 -o root -g root -D etc/profile.d/* $(DESTDIR)$(prefix)/etc/profile.d
+	install -d $(DESTDIR)/etc/profile.d
+	install -m 755 -o root -g root -D etc/profile.d/* $(DESTDIR)/etc/profile.d
 
 	install -d $(DESTDIR)$(prefix)/lib/wsl-ssh
 	cp -P lib/wsl-ssh/* $(DESTDIR)$(prefix)/lib/wsl-ssh
