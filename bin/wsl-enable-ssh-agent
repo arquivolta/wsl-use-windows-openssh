@@ -3,8 +3,8 @@
 set -exuo pipefail
 
 DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-USR="$DIR/.."
+PREFIX=$(realpath "$DIR/..")
 
-cp "$USR/share/wsl-ssh/enable-agent.ps1" /mnt/c/ProgramData
+cp "$PREFIX/share/wsl-ssh/enable-agent.ps1" /mnt/c/ProgramData
 powershell.exe -NoProfile -File 'C:\\ProgramData\\enable-agent.ps1' -ExecutionPolicy Unrestricted -NonInteractive
-rm /mnt/c/ProgramData/enable-agent.ps1
+rm '/mnt/c/ProgramData/enable-agent.ps1'
