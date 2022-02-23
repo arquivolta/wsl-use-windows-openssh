@@ -1,4 +1,5 @@
-# wsl-use-windows-openssh - Use your Windows SSH Agent in WSL2
+# wsl-use-windows-openssh
+# Use your Windows SSH Agent in WSL2
 
 This project sets your WSL installation to use the SSH agent built into Windows.
 Did you know there's an SSH Agent built into Windows? What a world!
