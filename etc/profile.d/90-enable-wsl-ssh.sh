@@ -5,8 +5,8 @@ fi
 
 ## NB: We can't find PREFIX easily in a profile.d script so we'll need to
 ## try to guess what it is by running down the existing path
-BINDIR=$(dirname `which wsl-enable-ssh-agent`)
-PREFIXX=$(realpath "$BINDIR/..")
+bindir=$(dirname `which wsl-enable-ssh-agent`)
+prefix=$(realpath "$bindir/..")
 
 ## Put our symlinked OpenSSH in front of the real one
-export PATH="$PREFIXX/lib/wsl-ssh:$PATH"
+export PATH="$prefix/lib/wsl-ssh:$PATH"
