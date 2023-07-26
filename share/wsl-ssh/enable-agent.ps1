@@ -16,6 +16,7 @@ if ((Test-Admin) -eq $false)  {
 
 try {
 	Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+	Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 	Set-Service -Name ssh-agent -StartupType Automatic
 	Start-Service -Name ssh-agent
 } catch {
