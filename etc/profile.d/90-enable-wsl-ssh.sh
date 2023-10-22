@@ -1,5 +1,5 @@
 # Check to make sure we've set up ssh-agent
-if ! /mnt/c/Windows/System32/sc.exe query ssh-agent | grep 'RUNNING' > /dev/null; then
+if ! /usr/lib/wsl-ssh/ssh-add -L > /dev/null 2>&1 ; then
 	echo "The Windows OpenSSH Agent isn't running, start it via 'wsl-enable-ssh-agent'" >&2
 fi
 
